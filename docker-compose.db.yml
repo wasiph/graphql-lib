@@ -1,8 +1,8 @@
 version: '3.8'
 services:
   postgres:
-    image: postgres:13
-    container_name: postgres
+    image: postgres
+    container_name: postgresNestDB
     restart: always
     ports:
       - '5432:5432'
