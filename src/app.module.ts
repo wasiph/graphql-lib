@@ -11,6 +11,7 @@ import { AppResolver } from './app.resolver';
 import { AuthModule } from './auth/auth.module';
 import { PostsModule } from './posts/posts.module';
 import { UsersModule } from './users/users.module';
+import { SurveysModule } from './surveys/surveys.module';
 
 @Module({
   imports: [
@@ -34,6 +35,7 @@ import { UsersModule } from './users/users.module';
     AuthModule,
     UsersModule,
     PostsModule,
+    SurveysModule,
   ],
   controllers: [AppController],
   providers: [AppService, AppResolver],
