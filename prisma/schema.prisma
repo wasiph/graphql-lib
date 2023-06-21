@@ -1,15 +1,14 @@
-datasource db {
-  provider = "postgresql"
-  url      = env("DATABASE_URL")
-}
-
 generator client {
   provider = "prisma-client-js"
-  // previewFeatures = []
 }
 
 generator dbml {
   provider = "prisma-dbml-generator"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
 }
 
 model User {
@@ -20,8 +19,8 @@ model User {
   password  String
   firstname String?
   lastname  String?
-  posts     Post[]
   role      Role
+  posts     Post[]
 }
 
 model Post {
@@ -31,8 +30,102 @@ model Post {
   published Boolean
   title     String
   content   String?
-  author    User?    @relation(fields: [authorId], references: [id])
   authorId  String?
+  author    User?    @relation(fields: [authorId], references: [id])
+}
+
+model survey_2022_responses {
+  response_id                       Int     @id
+  mbranch                           String
+  employment                        String
+  remotework                        String
+  codingact                         String
+  ed_level                          String
+  learn_code                        String
+  learn_code_online                 String
+  learn_code_course_cert            String
+  years_code                        String
+  years_code_pro                    String
+  dev_type                          String
+  org_size                          String
+  purchase_influence                String
+  buy_new_tool                      String
+  country                           String
+  currency                          String
+  comp_total                        String
+  comp_freq                         String
+  languages_have_worked_with        String
+  languages_want_work_with          String
+  dbs_have_worked_with              String
+  dbs_want_work_with                String
+  platforms_have_worked_with        String
+  platforms_want_work_with          String
+  web_have_worked_with              String
+  web_want_work_with                String
+  misc_tech_have_worked_with        String
+  misc_tech_want_work_with          String
+  tools_tech_have_worked_with       String
+  tools_tech_want_work_with         String
+  new_collab_tools_have_worked_with String
+  new_collab_tools_want_work_with   String
+  os_professional_use               String?
+  os_personal_use                   String?
+  vcsystem                          String
+  vcinteraction                     String
+  vc_hosting_personal_use           String?
+  vc_hosting_professional_use       String?
+  ofc_stack_async_have_worked_with  String
+  ofc_stack_async_want_work_with    String
+  ofc_stack_sync_have_worked_with   String
+  ofc_stack_sync_want_work_with     String
+  blockchain                        String
+  new_so_sites                      String
+  so_visit_freq                     String
+  so_account                        String
+  so_part_freq                      String
+  so_comm                           String
+  age                               String
+  gender                            String
+  trans                             String
+  sexuality                         String
+  ethnicity                         String
+  accessibility                     String
+  mental_health                     String
+  t_branch                          String
+  i_cor_pm                          String
+  work_exp                          String
+  knowledge_1                       String
+  knowledge_2                       String
+  knowledge_3                       String
+  knowledge_4                       String
+  knowledge_5                       String
+  knowledge_6                       String
+  knowledge_7                       String
+  frequency_1                       String
+  frequency_2                       String
+  frequency_3                       String
+  time_searching                    String
+  time_answering                    String
+  onboarding                        String
+  profession_tech                   String
+  true_false_1                      String
+  true_false_2                      String
+  true_false_3                      String
+  survey_length                     String
+  survey_ease                       String
+  converted_comp_yearly             String
+}
+
+/// The underlying table does not contain a valid unique identifier and can therefore currently not be handled by Prisma Client.
+model surveys_schema {
+  survey_qid        String?
+  survey_qname      String?
+  survey_question   String?
+  survey_force_resp String?
+  survey_type       String?
+  survey_selector   String?
+
+  @@ignore
 }
 
 enum Role {

@@ -10,8 +10,8 @@ Table User {
   password String [not null]
   firstname String
   lastname String
-  posts Post [not null]
   role Role [not null]
+  posts Post [not null]
 }
 
 Table Post {
@@ -21,8 +21,90 @@ Table Post {
   published Boolean [not null]
   title String [not null]
   content String
-  author User
   authorId String
+  author User
+}
+
+Table survey_2022_responses {
+  response_id Int [pk]
+  mbranch String [not null]
+  employment String [not null]
+  remotework String [not null]
+  codingact String [not null]
+  ed_level String [not null]
+  learn_code String [not null]
+  learn_code_online String [not null]
+  learn_code_course_cert String [not null]
+  years_code String [not null]
+  years_code_pro String [not null]
+  dev_type String [not null]
+  org_size String [not null]
+  purchase_influence String [not null]
+  buy_new_tool String [not null]
+  country String [not null]
+  currency String [not null]
+  comp_total String [not null]
+  comp_freq String [not null]
+  languages_have_worked_with String [not null]
+  languages_want_work_with String [not null]
+  dbs_have_worked_with String [not null]
+  dbs_want_work_with String [not null]
+  platforms_have_worked_with String [not null]
+  platforms_want_work_with String [not null]
+  web_have_worked_with String [not null]
+  web_want_work_with String [not null]
+  misc_tech_have_worked_with String [not null]
+  misc_tech_want_work_with String [not null]
+  tools_tech_have_worked_with String [not null]
+  tools_tech_want_work_with String [not null]
+  new_collab_tools_have_worked_with String [not null]
+  new_collab_tools_want_work_with String [not null]
+  os_professional_use String
+  os_personal_use String
+  vcsystem String [not null]
+  vcinteraction String [not null]
+  vc_hosting_personal_use String
+  vc_hosting_professional_use String
+  ofc_stack_async_have_worked_with String [not null]
+  ofc_stack_async_want_work_with String [not null]
+  ofc_stack_sync_have_worked_with String [not null]
+  ofc_stack_sync_want_work_with String [not null]
+  blockchain String [not null]
+  new_so_sites String [not null]
+  so_visit_freq String [not null]
+  so_account String [not null]
+  so_part_freq String [not null]
+  so_comm String [not null]
+  age String [not null]
+  gender String [not null]
+  trans String [not null]
+  sexuality String [not null]
+  ethnicity String [not null]
+  accessibility String [not null]
+  mental_health String [not null]
+  t_branch String [not null]
+  i_cor_pm String [not null]
+  work_exp String [not null]
+  knowledge_1 String [not null]
+  knowledge_2 String [not null]
+  knowledge_3 String [not null]
+  knowledge_4 String [not null]
+  knowledge_5 String [not null]
+  knowledge_6 String [not null]
+  knowledge_7 String [not null]
+  frequency_1 String [not null]
+  frequency_2 String [not null]
+  frequency_3 String [not null]
+  time_searching String [not null]
+  time_answering String [not null]
+  onboarding String [not null]
+  profession_tech String [not null]
+  true_false_1 String [not null]
+  true_false_2 String [not null]
+  true_false_3 String [not null]
+  survey_length String [not null]
+  survey_ease String [not null]
+  converted_comp_yearly String [not null]
 }
 
 Enum Role {

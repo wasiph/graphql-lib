@@ -113,6 +113,93 @@ input SignupInput {
 
 type Subscription {
   postCreated: Post!
+  surveyCreated: Survey!
+}
+
+type Survey {
+  accessibility: String!
+  age: String!
+  blockchain: String!
+  buy_new_tool: String!
+  comp_freq: String!
+  comp_total: String!
+  country: String!
+
+  """Identifies the date and time when the object was created."""
+  createdAt: DateTime!
+  currency: String!
+  dbs_have_worked_with: String!
+  dbs_want_work_with: String!
+  dev_type: String!
+  ed_level: String!
+  employment: String!
+  ethnicity: String!
+  frequency_1: String!
+  frequency_2: String!
+  frequency_3: String!
+  gender: String!
+  i_cor_pm: String!
+  id: ID!
+  knowledge_1: String!
+  knowledge_2: String!
+  knowledge_3: String!
+  knowledge_4: String!
+  knowledge_5: String!
+  knowledge_6: String!
+  knowledge_7: String!
+  languages_have_worked_with: String!
+  languages_want_work_with: String!
+  learn_code: String!
+  learn_code_course_cert: String!
+  learn_code_online: String!
+  mbranch: String!
+  mental_health: String!
+  misc_tech_have_worked_with: String!
+  misc_tech_want_work_with: String!
+  new_collab_tools_have_worked_with: String!
+  new_collab_tools_want_work_with: String!
+  new_so_sites: String!
+  ofc_stack_async_have_worked_with: String!
+  ofc_stack_async_want_work_with: String!
+  ofc_stack_sync_have_worked_with: String!
+  ofc_stack_sync_want_work_with: String!
+  onboarding: String!
+  org_size: String!
+  os_personal_use: String
+  os_professional_use: String
+  platforms_have_worked_with: String!
+  platforms_want_work_with: String!
+  profession_tech: String!
+  purchase_influence: String!
+  remotework: String!
+  sexuality: String!
+  so_account: String!
+  so_comm: String!
+  so_part_freq: String!
+  so_visit_freq: String!
+  survey_ease: String!
+  survey_length: String!
+  t_branch: String!
+  time_answering: String!
+  time_searching: String!
+  tools_tech_have_worked_with: String!
+  tools_tech_want_work_with: String!
+  trans: String!
+  true_false_1: String!
+  true_false_2: String!
+  true_false_3: String!
+
+  """Identifies the date and time when the object was last updated."""
+  updatedAt: DateTime!
+  vc_hosting_personal_use: String
+  vc_hosting_professional_use: String
+  vcinteraction: String!
+  vcsystem: String!
+  web_have_worked_with: String!
+  web_want_work_with: String!
+  work_exp: String!
+  years_code: String!
+  years_code_pro: String!
 }
 
 type Token {
